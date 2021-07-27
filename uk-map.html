@@ -32,12 +32,18 @@
 
         .map{
             display: block;
-            transform: scale(0.8) translateY(-50px);
+            transform: scale(0.7) translateY(-150px);
         }
+
         @media screen and (max-width: 900px){
             .map{
                 transform: initial;
             }
+        }
+        .map-wrapper{
+            margin: 0 auto;
+            max-width: 1200px;
+            max-height: 500px;
         }
         .mapUA{
             fill: var(--path-bg-color);
@@ -78,15 +84,6 @@
             max-width: 1430px;
             padding: 0 15px;
             margin: 0 auto;
-        }
-        .map-wrapper{
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-        @media screen and (max-width: 500px) {
-            .map-wrapper{
-                margin-top: 20px;
-            }
         }
 
         /* article */
@@ -280,7 +277,7 @@
 </head>
 <body>
 <div class = "container">
-    <h1 class = "title">Сертифіковані точки продажу</h1>
+    <h2 class = "title">Iнтернет-магазини партнерів</h2>
     <section class = "offline-shops">
         <h3 class = "offline-shops__title"></h3>
         <div class = "articles-wrapper">
@@ -288,23 +285,15 @@
                 <div class = "article__wrapper">
                     <h4 class = "article__title">QTAP</h4>
                     <a class = "article__tel" href="https://qtap.in.ua/">https://qtap.in.ua/</a>
-                </div>
-            </article>
-            <article class = "article">
-                <div class = "article__wrapper">
-                    <h4 class = "article__title">QTAP</h4>
                     <a class = "article__tel" href="https://qtap.shop/">https://qtap.shop/</a>
-                </div>
-            </article>
-            <article class = "article">
-                <div class = "article__wrapper">
-                    <h4 class = "article__title">QTAP</h4>
                     <a class = "article__tel" href="https://www.q-tap.kiev.ua/">https://www.q-tap.kiev.ua/</a>
                 </div>
             </article>
         </div>
     </section>
+
     <div class = "map-wrapper">
+        <h2 class = "title">Сертифіковані точки продажу</h2>
         <svg class = "map" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg2" x="0px" y="0px" viewBox="0 0 1264.8 841.6"  xml:space="preserve" preserveAspectRatio="xMidYMid meet">
             <g>
                 <g>
