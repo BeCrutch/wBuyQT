@@ -24,6 +24,9 @@
             font-size: 16px;
             line-height: 1.5;
         }
+        .body-fixed{
+            overflow: hidden;
+        }
 
         /*map*/
 
@@ -212,6 +215,7 @@
         /* Modal window */
 
         .modal-window{
+            padding: 15px;
             position: fixed;
             width: 100%;
             top: 0;
@@ -234,13 +238,13 @@
         .modal-window__body{
             border-radius: 10px;
             padding-top: 20px;
-            margin: 15px;
             background-color: #fff;
             max-width: 1200px;
             width: 100%;
             position: relative;
             max-height: 100%;
             min-height: 50px;
+            overflow-y: auto;
         }
         @media screen and (max-width: 630px){
             .modal-window__body{
@@ -1164,6 +1168,7 @@
 
     /* open modal*/
     function modalOpen(dataCode){
+        document.body.classList.add('body-bixed');
         displayBlock(dataCode);
         const modalActive = document.querySelector(".modal-window.open");
         if(modalActive) {
@@ -1174,6 +1179,7 @@
 
     /* close modal*/
     function modalClose() {
+        document.body.classList.remove('body-bixed');
         currentModal.classList.remove('open');
         setTimeout(displayNone, 500);
     }
