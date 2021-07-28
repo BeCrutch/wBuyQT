@@ -1267,7 +1267,6 @@
     const modalExit = document.querySelector(".close-btn");
     const defaultBackground = "#d0d0d0";
     const hoverBackground = "gradient";
-    const nameObl = document.querySelectorAll('.region.active');
     const currentModal = document.querySelector('.modal-window');
 
     /* remove articles */
@@ -1331,11 +1330,13 @@
         modalClose(this.closest('.modal-window__body'));
     });
 
+    const nameObl = document.querySelectorAll('.region.active');
+
     /* hover-region */
     nameObl.forEach(item => {
         item.addEventListener('mouseover', function(){
             let dataCode = item.getAttribute('data-code');
-            document.querySelector(`.mapUA[data-code = '${dataCode}']`).style.fill = `url(#${hoverBackground})`;
+            document.querySelector(`.mapUA[data-code = '${dataCode}']`).style.fill = `url('#${hoverBackground}')`;
         });
         item.addEventListener('mouseout', function(){
             let dataCode = item.getAttribute('data-code');
